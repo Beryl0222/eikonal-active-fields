@@ -523,5 +523,91 @@
       "seed": 149,
       "block_reads": 12000
     }
-  ]
+  ],
+  "sampling": {
+    "tile_size": 4,
+    "budget": 3,
+    "blocks": [
+      {
+        "block_id": "b02",
+        "rectangle": [
+          0,
+          8,
+          4,
+          12
+        ],
+        "cost": 2,
+        "revision": 1
+      },
+      {
+        "block_id": "b12",
+        "rectangle": [
+          4,
+          8,
+          8,
+          12
+        ],
+        "cost": 2,
+        "revision": 1
+      }
+    ],
+    "pending_requests": [
+      {
+        "id": "need-far",
+        "rectangle": [
+          6,
+          0,
+          10,
+          6
+        ],
+        "purpose": "prediction",
+        "weight": 2,
+        "training_weight": 0,
+        "time_horizon": 40
+      },
+      {
+        "id": "need-junction",
+        "rectangle": [
+          3,
+          4,
+          7,
+          9
+        ],
+        "purpose": "training",
+        "weight": 1,
+        "training_weight": 4,
+        "time_horizon": 40
+      }
+    ],
+    "arrivals": [
+      {
+        "order_id": "scan1",
+        "block_id": "b02",
+        "revision": 1,
+        "values": [
+          {
+            "position": [
+              3,
+              8
+            ],
+            "speed": 1.3
+          }
+        ]
+      },
+      {
+        "order_id": "scan2",
+        "block_id": "b12",
+        "revision": 1,
+        "values": [
+          {
+            "position": [
+              4,
+              8
+            ],
+            "speed": 1.15
+          }
+        ]
+      }
+    ]
+  }
 }

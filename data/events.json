@@ -16,6 +16,15 @@
     "window": "et0"
   },
   {
+    "op": "plan_sampling",
+    "budget": 3
+  },
+  {
+    "op": "issue_sampling",
+    "order_id": "scan1",
+    "block_id": "b02"
+  },
+  {
     "op": "edit",
     "edit": "remove-s0"
   },
@@ -42,5 +51,21 @@
   {
     "op": "open_training",
     "window": "et1"
+  },
+  {
+    "op": "plan_sampling",
+    "budget": 3
+  },
+  {
+    "op": "sampling_arrival",
+    "order_id": "scan1",
+    "block_id": "b02"
+  },
+  {
+    "op": "query",
+    "request": "junction"
+  },
+  {
+    "op": "train_query"
   }
 ]
