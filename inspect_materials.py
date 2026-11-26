@@ -26,6 +26,14 @@ def validate():
         r,c=s['position'];assert d['kind'][r][c]=='free' and s['t0']>=0
     assert len({s['id'] for s in d['sources']})==len(d['sources'])
     assert all(e['op']!='edit' or e['edit'] in {x['id'] for x in d['edits']} for e in events)
+    sample=d['sampling']
+    block_ids={b['block_id'] for b in sample['blocks']}
+    assert len(block_ids)==len(sample['blocks'])
+    for arrival in sample['arrivals']:
+        assert arrival['block_id'] in block_ids
+        for v in arrival['values']:
+            r,c=v['position'];assert d['kind'][r][c]=='missing' and v['speed']>0
+    assert sample['budget']<sum(b['cost'] for b in sample['blocks'])
     return d,events
 
 if __name__=='__main__':
