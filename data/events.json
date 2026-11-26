@@ -1,0 +1,46 @@
+[
+  {
+    "op": "solve",
+    "revision": 1
+  },
+  {
+    "op": "query",
+    "request": "far"
+  },
+  {
+    "op": "query",
+    "request": "junction"
+  },
+  {
+    "op": "open_training",
+    "window": "et0"
+  },
+  {
+    "op": "edit",
+    "edit": "remove-s0"
+  },
+  {
+    "op": "edit",
+    "edit": "close-gap"
+  },
+  {
+    "op": "query",
+    "request": "far"
+  },
+  {
+    "op": "backward",
+    "window": "et0"
+  },
+  {
+    "op": "edit",
+    "edit": "fill-speed"
+  },
+  {
+    "op": "query",
+    "request": "junction"
+  },
+  {
+    "op": "open_training",
+    "window": "et1"
+  }
+]
